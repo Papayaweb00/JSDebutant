@@ -1,0 +1,20 @@
+const afficheTable = (etudiants) => {
+    let html = '<table>';
+    etudiants.forEach((ligne, index) => {
+        html += '<tr>';
+        ligne.forEach((cellule, cellIndex) => {
+            if (index === 0) {
+                html += `<td>${cellule !== null ? cellule : ''}</td>`;
+            } else {
+                html += `<td>${cellule !== null ? cellule : ''}</td>`;
+            }
+        });
+        html += '</tr>';
+    });
+    html += '</table>';
+    return html;
+};
+
+console.log(etudiants);
+
+document.querySelector('.table').innerHTML = afficheTable(etudiants);
